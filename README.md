@@ -8,4 +8,6 @@ Alignments are not trimmed, if aligment fails (large proteins like PKSs NRPSs) t
 Better for large DB (ran in 11000 bacterial genomes
 Can take antismash outputs if processed with the GFF_to_OCRASON.pl script
 
+Read me info coming soon
+
 need to work on the input command line stuff :S
