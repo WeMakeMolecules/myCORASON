@@ -1,5 +1,5 @@
 # myCORASON
-An alternative Version of the corason pipeline, (posted at https://github.com/nselem )  with better phylogenetic trees and other features, flexible and tweakeale, for in house running, less dependencies, in progress
+An alternative Version of the corason pipeline, (posted at https://github.com/nselem )  with better phylogenetic trees and other features, flexible and tweakeale, for in house running, it works great on fungal genomes less dependencies, IN PROGRESS!
 changes
 Uses iqtree
 no GbLocks
