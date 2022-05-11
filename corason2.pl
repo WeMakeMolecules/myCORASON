@@ -29,6 +29,9 @@ print "#########################################################################
 print "You are using the tools: $nameFolder\n";
 print "Your working directory is $directorio\n";
 
+#grabbing the query name to labvel the SVG output
+$labelsvg="$queries";
+$labelsvg=~s/.query//;
 
 open (REPORTE, ">./RESULTS/Report.txt") or die "Couldn't open report file $!";
 my $list=listas($num,$lista);  #$list stores in a string the genomes that will be used
@@ -127,8 +130,10 @@ if ($boolCore>1){
         }
 print "Drawing the BGCs with files $INPUTS : \n";
 	`perl  3_Draw.pl $INPUTS`;
-print "a SVG file with the BGC's has been generated (GENE_CONTEXT.svg)\n";
-system 'mv *.aln *.contree GENE_CONTEXT.svg ./RESULTS';
+#renaming SVG file
+`mv GENE_CONTEXT.svg $labelsvg.svg`;
+print "a SVG file with the BGC's has been generated $labelsvg.svg\n";
+system 'mv *.aln *.contree *.svg ./RESULTS';
 system 'mv *.BLAST ./RESULTS';
 cleanFiles;
 print "BGCs found in the following genome IDs:\n\n";
