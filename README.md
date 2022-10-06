@@ -26,7 +26,7 @@ It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if
         install SVG
 
 # Loading the example dataset
-    cd CORASON3/
+    cd ..
     tar -xvf EXAMPLE_DATASET.tar.gz
     mv EXAMPLE_DATASET/GENOMES bin/
     mv EXAMPLE_DATASET/GENOMES.IDs bin/
