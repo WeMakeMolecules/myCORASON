@@ -24,7 +24,7 @@ print "\n\n#####################################################################
 print "CORASON: CORE ANALYSIS OF SYNTENIC ORTHOLOGOUS NATURAL PRODUCT BGCs\n";
 print "this is version 2.1 uses iqtree, no trimming, phylo sort with nw_distances\n";
 print "Smartmatch silenced, order files exist if trees fail, aligning with mafft\n";
-print "Adapted to run with wrapper fungison.pl\n";
+print "Adapted to run with wrapper corason3.pl\n";
 print "latest version modified by Pablo Cruz-Morales september 2022\n";
 print "##########################################################################\n\n";
 print "Your working directory is $directorio\n";
