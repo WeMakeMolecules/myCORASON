@@ -43,7 +43,7 @@ It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if
     -r 1234			|REFERENCE GENOME ID FROM GENOMES.IDs, WHEN NOT USING -d full MAKE SURE THE ENTRY IS LISTED IN -d [a number]
     -e 0.0000001		|E-VALUE CUTOFF, [a number]
     -s 200	        	|BIT-SCORE CUTOFF [a number]
-    -f 10			|NUMBER OF FLAKING GENES INCLUDED IN THE ANALYSIS, [a number]
+    -f 10			|NUMBER OF FLANKING GENES INCLUDED IN THE ANALYSIS, [a number]
     -d full  OR -db 1,2,3	|IDs OF THE GENOMES INCLUDED IN THE ANALYSIS, ][full= entire database OR selected genomes separated by ',' ]
     -x n or -F FORMATDB	|FORMAT THE DATABASE SELECTED WITH THE -d OPTION, ['no' is the recommeded option or 'FORMATDB']
     
