@@ -142,4 +142,13 @@ here i opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
 	6. Do as many genomes as needed then rename the files with secuencial numbers 1...N and create (or update) the /bin/GENOMES.IDs file like this
 
 
+	1	6666666.505805	BGC0001764_s56-p1_Streptomyces_sp._SoC090715LN-17	1
+	2	6666666.298557	BGC0001295_cremeomycin_Streptomyces_cremeus	2
+	3	2898053.3	Actinopyridazinone_BGC_Streptomyces_sp._MSD090630SC-05	3
+	4	6666666.505798	BGC0001983_triacsins_Kitasatospora_aureofaciens	4
+	5	6666666.501124	Streptomyces_fragilis_NBRC_12862	5
+	6	6666666.307463	Glycomyces_harbinensis_CGMCC_4.3516	6
+
+
+
 
