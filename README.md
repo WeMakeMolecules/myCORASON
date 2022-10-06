@@ -5,7 +5,7 @@ It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if
 # viva la perl!
 
 # Download the precompiled package
-	wget https://github.com/WeMakeMolecules/myCORASON/raw/main/CORASON3.tar.gz
+	wget https://github.com/WeMakeMolecules/myCORASON/raw/master/CORASON3.tar.gz
 # Decompress the file
     tar -xvf CORASON3.tar.gz
 # make the nw_distance file executable
