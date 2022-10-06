@@ -150,5 +150,6 @@ here i opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
 	6	6666666.307463	Glycomyces_harbinensis_CGMCC_4.3516	6
 
 
+	7. Run corason3.pl with the option -x FORMATDB to update the database
 
 
