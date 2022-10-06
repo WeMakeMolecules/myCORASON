@@ -34,7 +34,7 @@ It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if
     rm -r EXAMPLE_DATASET*
 
 # Test run corason3
-    perl corason3.pl -q Tri28.query -d full -x FORMATDB -r 1 -e 0.0000000001 -s 250 -f 10 
+    perl corason3.pl -q Tri28.query -d full -x no -r 3 -e 0.0000000001 -s 250 -f 10
 
 # expected output in STDIN:
 	USAGE: perl corason3.pl <OPTIONS>
