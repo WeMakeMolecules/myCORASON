@@ -118,6 +118,28 @@ here i opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
 
 ![Tri28 core contree](https://user-images.githubusercontent.com/68575424/194334668-01314e7d-8aea-4e9b-86cf-8f7e993f263c.png)
 
+# Creating a CORASON formatted database:
+
+	1. Upload your genome to the RAST server (you need to get an account):
+![image](https://user-images.githubusercontent.com/68575424/194347007-9db18417-5d68-43fb-99e3-31c836a0c8f3.png)
+
+	2. Select the file with your genome sequence:
+![image](https://user-images.githubusercontent.com/68575424/194347168-2715e7db-45fb-405e-ad19-43f020df21d5.png)
+
+	3. Fill the form:
+![image](https://user-images.githubusercontent.com/68575424/194347273-c234ae64-595f-44ec-8c2f-6bea9820bccf.png)
+
+	4. Submit the job:
+
+![image](https://user-images.githubusercontent.com/68575424/194347633-74c951e8-6dd0-4ffa-94e7-1ede60a2f32b.png)
+	
+	5. When its done... click on details
+![image](https://user-images.githubusercontent.com/68575424/194348108-c0b0e0b7-a3d5-4013-a6fb-e79cf354e306.png)
+	
+	Download the aminoacids fasta file as .faa and the features spread sheet as .txt
+![image](https://user-images.githubusercontent.com/68575424/194348528-88521931-8204-46ed-a29c-a4c207bd364a.png)
+
+	6. Do as many genomes as needed then rename the files with secuencial numbers 1...N and create (or update) the /bin/GENOMES.IDs file like this
 
 
 
