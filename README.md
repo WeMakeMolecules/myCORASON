@@ -4,7 +4,11 @@ It wont drop large jobs on thousands of PKSs and NRPSs in fungal and bacterial g
 It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if there is no core
 # viva la perl!
 
-# Download the precompiled package
+note: the current .gz package runs with an older version of iqtreee , if you have the lastest then just change the lines where IQTREE is called in in the corason.pl script from 'iqtree' to 'iqtee2'. or replace the corason.pl file from the .gz directory with the corason.pl file below. I will fix this soon.
+
+Pablo
+
+# Download the  package
 	wget https://github.com/WeMakeMolecules/myCORASON/raw/master/CORASON3.tar.gz
 # Decompress the file
     tar -xvf CORASON3.tar.gz
