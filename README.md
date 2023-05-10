@@ -115,11 +115,34 @@ It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if
 ![Tri28 gene_context](https://user-images.githubusercontent.com/68575424/194334286-0ce6f7bd-76d1-4736-a101-30126e29fd20.svg)
 
 # Cheking the  Tri28.core.contree ( you can open it in  a web browser) made with synthenic orthologs found 
-here i opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
+here I opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
 
 ![Tri28 core contree](https://user-images.githubusercontent.com/68575424/194334668-01314e7d-8aea-4e9b-86cf-8f7e993f263c.png)
 
-# Creating a CORASON formatted database:
+	
+# Creating a CORASON formatted database using PRODIGAL and local ANTISMASH (or solo CORASON):	
+Get prodigal:
+	sudo apt-get prodigal
+	
+Get antismash (Instructions in detail here: https://docs.antismash.secondarymetabolites.org/install/)
+	
+	mkdir ~/bin    # not required if you already have that
+	curl -q https://dl.secondarymetabolites.org/releases/latest/docker-run_antismash-full > ~/bin/run_antismash
+	chmod a+x ~/bin/run_antismash
+	run_antismash <input file> <output directory> [antismash options]
+	
+Run gene calling, antismash annotation, then convert to corason format files, create a corason database:
+
+	prodigal -i NAME -a NAME.prot_raw -f gff -o NAME.gff
+	run_antismash NAME.fna NAME --genefinding-gff3 /input/NAME.gff --taxon bacteria --fullhmmer --cc-mibig --cb-knownclusters
+	perl GFF_GBK_to_CORASON.pl NAME.prot_raw NAME.gbk NAME.gff
+	wget https://github.com/WeMakeMolecules/fun-git/raw/main/genomesdb_maker.pl
+	perl genomesdb_maker.pl
+
+You will get a folder /GENOMES with the .txt and .faa files and the GENOMES.IDs file ready to use for CORASON
+	
+	
+# Creating a CORASON formatted database using RAST:
 
 	1. Upload your genome to the RAST server (you need to get an account):
 ![image](https://user-images.githubusercontent.com/68575424/194347007-9db18417-5d68-43fb-99e3-31c836a0c8f3.png)
