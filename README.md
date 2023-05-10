@@ -36,7 +36,7 @@ It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if
 
 # Test run corason3
     perl corason3.pl -q Tri28.query -d full -x FORMATDB -r 3 -e 0.0000000001 -s 250 -f 10
- # expected output in STDIN:
+ # Expected output in STDIN:
  USAGE: perl corason3.pl <OPTIONS>
     
     OPTIONS:
@@ -104,7 +104,6 @@ It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if
 	Have a great day
 
 
-
 # Cheking results located in a folder called Tri28_results:
 	cd Tri28_results/
 	ls
@@ -122,6 +121,7 @@ here I opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
 	
 # Annotating bacterial genomes locally and creating a CORASON formatted database (CORASON solito):	
 Get prodigal:
+	
 	sudo apt-get prodigal
 	
 Get antismash (Instructions in detail here: https://docs.antismash.secondarymetabolites.org/install/)
