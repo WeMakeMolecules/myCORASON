@@ -120,7 +120,7 @@ here I opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
 ![Tri28 core contree](https://user-images.githubusercontent.com/68575424/194334668-01314e7d-8aea-4e9b-86cf-8f7e993f263c.png)
 
 	
-# Creating a CORASON formatted database using PRODIGAL and local ANTISMASH (or solo CORASON):	
+# Annotating bacterial genomes locally and creating a CORASON formatted database (CORASON solito):	
 Get prodigal:
 	sudo apt-get prodigal
 	
