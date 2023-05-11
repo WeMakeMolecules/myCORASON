@@ -140,6 +140,7 @@ Get antismash (Instructions in detail here: https://docs.antismash.secondarymeta
 
 Get genomes
 	
+	wget https://github.com/WeMakeMolecules/myCORASON/raw/master/download_genomes.sh
 	sh download_genomes.sh  'Genus specie strain'   
 
 use the quotation marks '' example:
