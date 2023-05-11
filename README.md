@@ -1,5 +1,11 @@
 # Corason3
-This is a clean version of CORASON that works with genomes annotated in RAST and with genomes annotated with the tools in the FUNGIT repository.
+This is a clean version of CORASON 
+This repository is bacteria-centric and includes scripts for downloading genomes, local gene-calling with prodigal, annotation with ANTISMASH v7, format conversion and database creation
+It also works with genomes annotated in the RAST server
+Check below for simple instructions
+
+For fungal genomes use the tools in the FUNGIT and FUNGISON repositories where you can find standalone fungal gene calling, annotation and analysis tools
+
 It wont drop large jobs on thousands of PKSs and NRPSs in fungal and bacterial genomes and in general for long sequences
 It uses mafft to make alignments, iqtree to make phylogenies and it wont stop if there is no core
 # viva la perl!
@@ -131,15 +137,41 @@ Get antismash (Instructions in detail here: https://docs.antismash.secondarymeta
 	chmod a+x ~/bin/run_antismash
 	run_antismash <input file> <output directory> [antismash options]
 	
+
+Get genomes
+	
+	sh download_genomes.sh  'Genus specie strain'   
+
+use the quotation marks '' example:
+	
+	sh download_genomes.sh  Streptomyces
+
+It downloads all the Streptomyces genomes in the GenBank
+		
+	sh download_genomes.sh  'Streptomyce coelicolor'
+
+It downloads all the Streptomyces coelicolor genomes in the GenBank
+	
+	
 Run gene calling, antismash annotation, then convert to corason format files, create a corason database:
 
 	prodigal -i NAME -a NAME.prot_raw -f gff -o NAME.gff
 	run_antismash NAME.fna NAME --genefinding-gff3 /input/NAME.gff --taxon bacteria --fullhmmer --cc-mibig --cb-knownclusters
 	perl GFF_GBK_to_CORASON.pl NAME.prot_raw NAME.gbk NAME.gff
 	wget https://github.com/WeMakeMolecules/fun-git/raw/main/genomesdb_maker.pl
+	
+Do a few of these, you can use the wrapper script 
+	
+	wget https://github.com/WeMakeMolecules/myCORASON/raw/master/annotation_wrapper.sh
+	sh annotation_wrapper.sh NAME1
+	sh annotation_wrapper.sh NAME2
+	sh annotation_wrapper.sh NAME3
+	
+Then create a GENOMES database ready for CORASON3
 	perl genomesdb_maker.pl
 
 You will get a folder /GENOMES with the .txt and .faa files and the GENOMES.IDs file ready to use for CORASON
+	
 	
 	
 # Creating a CORASON formatted database using RAST:
