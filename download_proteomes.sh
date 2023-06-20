@@ -41,7 +41,10 @@ pigz -d *.gz
 
 echo "RENAMING FILES..."
 #this line is to create a little script with the orders to rename the files with the species + strain name
-awk 'BEGIN {FS="\t"}; {print "mv,"$1"*protein.faa,"$8$9$1".faa"}' list.txt | sed s'/ /_/g'|sed s'/=/-/g'|sed s'/strain//'|sed s'/(//'|sed s'/)//'|sed 's/-/_/g'|sed 's/,/ /g' > rename.sh
+
+#awk 'BEGIN {FS="\t"}; {print "mv,"$1"*protein.faa,"$8$9$1".faa"}' list.txt | sed s'/ /_/g'|sed s'/=/-/g'|sed s'/strain//'|sed s'/(//'|sed s'/)//'|sed 's/-/_/g'|sed 's/,/ /g' > rename.sh
+awk 'BEGIN {FS="\t"}; {print "mv,"$1"_"$16"_protein.faa,"$8$9$1".faa"}' list.txt |sed s'/ /_/g'|sed s'/=/-/g'|sed s'/strain//'|sed s'/(//'|sed s'/)//'|sed 's/-/_/g'|sed 's/,/ /g' >rename.sh
+
 #now I have to clean the weird symbol using tr, i write a new file with the clean names 
 tr '/' '_' < rename.sh > rename_clean.sh 
 
