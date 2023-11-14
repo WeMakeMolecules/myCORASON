@@ -1,6 +1,6 @@
 echo "################################################################################################################################"
 echo "# This BASH script contains a set of instructions to download genomic sequences from the NCBI FTP site,                        #"
-echo "# pcruzm@biosustain.dtu.dk may 2023                                                                                                      #
+echo "# pcruzm@biosustain.dtu.dk may 2023                                                                                            #"
 echo "# Type download_genomes.sh and a keyword the script will download the genomes with th keyword                                  #"
 echo "# usage: download_genomes.sh  'Genus specie strain'   use the quotation marks '                                                #"
 echo "# or: download_genomes.sh  'KEYWORD' single word no spaces                                                                     #"
